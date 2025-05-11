@@ -1,0 +1,1 @@
+(find ~/ -type f -not -path '*/.*' -not -path '*/venv/*' -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*/.idea/*' -not -path '*/.vscode/*' 2>/dev/null | rofi -dmenu -matching fuzzy -p "Open file:" -i | xargs -d '\n' -r xdg-open) &
